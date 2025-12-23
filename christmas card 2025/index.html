@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flip Card</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #000000;
+            padding: 20px;
+        }
+
+        .card-container {
+            perspective: 1000px;
+            width: 500px;
+            height: 350px;
+        }
+
+        .card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            cursor: pointer;
+        }
+
+        .card.flipped {
+            transform: rotateY(180deg);
+        }
+
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            /* border-radius: 20px; */
+            border: .1px solid #c63e1d;
+            box-shadow: 0 10px 40px rgba(198, 62, 29, 0.3);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card-front {
+            background: #000000;
+            color: white;
+        }
+
+        .card-back {
+            background: #000000;
+            color: white;
+            transform: rotateY(180deg);
+        }
+
+        .card-content-wrapper {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-icon {
+            font-size: 80px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        .card-content {
+            font-size: 16px;
+            line-height: 1.6;
+            opacity: 0.95;
+        }
+
+        .click-hint {
+            position: absolute;
+            bottom: 20px;
+            font-size: 14px;
+            opacity: 0.8;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 0.8;
+            }
+            50% {
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <div class="card" id="flipCard">
+            <div class="card-face card-front">
+                <div class="card-content-wrapper">
+                    <div class="card-icon">🎴</div>
+                    <div class="card-title">Front Side</div>
+                    <div class="card-subtitle">Click to flip</div>
+                </div>
+                <div class="click-hint">👆 Click me!</div>
+            </div>
+            <div class="card-face card-back">
+                <div class="card-content-wrapper">
+                    <div class="card-icon">✨</div>
+                    <div class="card-title">Back Side</div>
+                    <div class="card-content">
+                        This is the back of the card!<br>
+                        Click again to flip back.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const card = document.getElementById('flipCard');
+        
+        card.addEventListener('click', function() {
+            card.classList.toggle('flipped');
+        });
+    </script>
+</body>
+</html>
