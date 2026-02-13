@@ -23,7 +23,7 @@ const sentences = [
   "you encourage me to try new things, even when the unfamiliarty scares me",
   "you hold me while i cry, even when you don't understand why",
   "the autism in you that you won't admit",
-  "'cobra'",
+  "\"cobra\"",
   "your gorgeous, beautiful eyes",
   "your nonchalance (wtv)",
   "the way you never remember your dreams. except for your poop dream. poopoo!!!!",
@@ -82,7 +82,28 @@ const sentences = [
   "your goodnight texts before you go to sleep",
   "the way you got my flowers for our first date",
   "how much thought you put into planning our first date",
-  "when you grab your tiddies on ft... hot."
+  "when you grab your tiddies on ft... hot.",
+  "\"i CONSULT! 🤘\"",
+  "the way you play along when i spin kick you w my jellycat heart on facetime",
+  "you're the love of my life and my best friend in one person (don't tell stef)",
+  "the way you stand behind me and hug me from the back while i make us matcha in the mornings",
+  "the way you try to understand me better so you can love in the best way possible",
+  "the 2% russian in you",
+  "drunk you (horny)",
+  "you're always down to hang out w my friends and meet my friends",
+  "your lovely delicious heavenly steak",
+  "you always offer to cook w me even tho i always just end up watching and you do all the cooking",
+  "how you're always so encouraging and willing to talk through things w me when i'm feeling lost",
+  "when you come home and tell me all the tea from work or with your roommates and friends",
+  "how you asked me to be your girlfriend",
+  "how patient you are w me",
+  "how you let me bully and make fun of you and then get mad over it myself. then you comfort me while i throw a tantrum.",
+  "well... you do give pretty great head",
+  "your cutie little kisses! and HOTTTT make outs :)",
+  "how you're both a big girl consultant but also this wonderful and creative mind who is my perfect partner in crime",
+  "you're such a talented photographer my love",
+  "WAOW YOU CAN PLAY 3 INSTRUMENTS??!?!!",
+  "the vid of tiny you playing the piano w a full orchestra behind you WOW SO TALENTED MY ASIAN GF!"
 ];
 
 export default sentences;

@@ -76,11 +76,11 @@ export default function PaperSlip({ sentence, phase, triggerKey }) {
     const texture = useMemo(() => createSlipTexture(sentence, bgImage), [sentence, bgImage]);
 
     // ── Position + opacity spring ──
-    // hidden  : inside envelope (y = -0.35, z = 0)
-    // sliding : poking out above envelope (y = 0.9, z = 0.05)
-    // center  : screen center (y = 0.3, z = 1.5)
+    // hidden  : inside envelope (y = -0.35, z = 0.2)
+    // sliding : poking out above envelope (y = 0.9, z = 0.2)
+    // center  : screen center (y = 0.05, z = 1.5)
     const targetY = phase === "hidden" ? -0.35 : phase === "sliding" ? 0.9 : 0.05;
-    const targetZ = phase === "hidden" ? 0 : phase === "sliding" ? 0.05 : 1.5;
+    const targetZ = phase === "hidden" ? 0.2 : phase === "sliding" ? 0.2 : 1.5;
     const targetOpacity = phase === "hidden" ? 0 : 1;
 
     const { posY, posZ, opacity } = useSpring({
