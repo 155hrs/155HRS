@@ -8,7 +8,8 @@ pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
-dist
+# dist — uncomment to ignore; we commit dist so GitHub Pages can serve the built app
+# dist
 dist-ssr
 *.local
 
