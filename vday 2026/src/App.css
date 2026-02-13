@@ -1,0 +1,193 @@
+/* ─────────────────────────────────────────────
+   Paper Slip Box — App Styles
+   ───────────────────────────────────────────── */
+
+/* ── Font: Helvetica (system) ── */
+
+/* ── Reset ── */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #D9D9D9;
+  color: #3a352e;
+}
+
+/* ── Full-screen container ── */
+.app {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* ── Main Logo ── */
+.main-logo {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30px;
+  /* Adjust based on original logo aspect ratio */
+  width: auto;
+  z-index: 20;
+  pointer-events: auto;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.main-logo:hover {
+  opacity: 0.8;
+}
+
+
+
+/* ── UI Overlay (sits on top of canvas) ── */
+.ui-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 48px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* ── Sentence display ── */
+.sentence-display {
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.sentence-display.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.sentence-text {
+  max-width: 480px;
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #3a352e;
+  letter-spacing: 0.02em;
+  padding: 0 24px;
+}
+
+/* ── Custom Font Import ── */
+/* Place your font file in src/assets/fonts/ and name it exactly as below, or update the filename here */
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-UltralightItalic.otf") format("opentype");
+  font-weight: 200;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("./assets/fonts/PPEditorialNew-Italic.otf") format("opentype");
+  font-weight: 500;
+  font-style: regular-italic;
+}
+
+/* ── Draw button ── */
+.draw-button {
+  pointer-events: auto;
+  font-family: "PP Editorial New", "Cormorant Garamond", serif;
+  /* font-weight: 500; */
+  /* Ultralight */
+  font-style: italic;
+  font-size: 18px;
+  /* Slightly larger than original 1rem for readability */
+  letter-spacing: 0.04em;
+
+  /* Reverted to original compact size */
+  display: flex;
+  /* Changed from inline-block to flex for centering */
+  padding: 14px 40px;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+
+  /* New Style */
+  border-radius: 15px;
+  /* Pill */
+  border: 1px solid #2B3C51;
+  background: #D9D9D9;
+  color: #2B3C51;
+
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: none;
+}
+
+.draw-button:hover:not(:disabled) {
+  color: #D9D9D9;
+  background: #2B3C51;
+  /* Slightly darker than D9D9D9 */
+  border-color: #1E2B3B;
+  border-width: 1px;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(43, 60, 81, 0.15);
+  /* Shadow using the brand color */
+}
+
+.draw-button:active:not(:disabled) {
+  background: #bfbfbf;
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.draw-button:disabled {
+  cursor: default;
+  opacity: 0.55;
+}
+
+.draw-button.empty {
+  border-style: dashed;
+  background: transparent;
+}
+
+.draw-button.drawing {
+  opacity: 0.6;
+}
+
+/* ── Button Group ── */
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  /* Let clicks pass through gaps */
+}
+
+/* ── Counter ── */
+.counter {
+  margin-top: 14px;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  /* color: #a09787; */
+  color: #2B3C51;
+  text-transform: lowercase;
+}
