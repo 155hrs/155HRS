@@ -47,7 +47,7 @@ const sentences = [
   "you make me feel like i'm actually enough",
   "how understanding you are. of everything.",
   "that crazy tongue thing you can do",
-  "your big, volumtuous, buzz ball XL boobies",
+  "your big, voluptuous, buzz ball XL boobies",
   "your tiny ahh waist i get to wrap my arms around",
   "the way you listen to me complain about your wrongdoings... in my dreams...",
   "everyone i've introduced you to has LOVED you",
