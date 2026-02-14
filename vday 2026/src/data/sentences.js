@@ -54,7 +54,7 @@ const sentences = [
   "that crazy tongue thing you can do",
   "your big, volumtuous, buzz ball XL boobies",
   "your tiny ahh waist i get to wrap my arms around",
-  "the way you listen to me complain about of your wrongdoings... in my dreams...",
+  "the way you listen to me complain about your wrongdoings... in my dreams...",
   "everyone i've introduced you to has LOVED you",
   "you get along w all my friends teehee",
   "you're so good at comforting me",
