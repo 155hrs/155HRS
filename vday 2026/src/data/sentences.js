@@ -1,8 +1,3 @@
-/**
- * 100 sentences — one for each paper slip.
- * Thematic: small reflections, quiet truths, love notes.
- */
-
 const sentences = [
   "your warm warm body keeps me warm at night :) (my personal furnace since day 1!)",
   "you love me even when i don't want to be loved",
